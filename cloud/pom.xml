@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- ====================================================== -->
+    <!-- 1. Maven Project Model Version                         -->
+    <!-- ====================================================== -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- ====================================================== -->
+    <!-- 2. Parent Project Configuration                        -->
+    <!-- Inherits common properties and dependency management  -->
+    <!-- from the root airline-microservices POM.               -->
+    <!-- ====================================================== -->
+    <parent>
+        <groupId>com.airline</groupId>
+        <artifactId>airline-microservices</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <!-- ====================================================== -->
+    <!-- 3. Module Coordinates                                  -->
+    <!-- Defines the artifact ID for the cloud infrastructure  -->
+    <!-- parent module.                                        -->
+    <!-- ====================================================== -->
+    <artifactId>cloud</artifactId>
+
+    <!-- ====================================================== -->
+    <!-- 4. Packaging Type                                      -->
+    <!-- POM packaging indicates that this project groups      -->
+    <!-- multiple Maven modules rather than producing a JAR.   -->
+    <!-- ====================================================== -->
+    <packaging>pom</packaging>
+
+    <!-- ====================================================== -->
+    <!-- 5. Project Metadata                                    -->
+    <!-- Provides a readable project name and description.     -->
+    <!-- ====================================================== -->
+    <name>Cloud Infrastructure</name>
+    <description>
+        Parent module for cloud infrastructure components
+        in the airline microservices architecture.
+    </description>
+
+    <!-- ====================================================== -->
+    <!-- 6. Child Module Configuration                          -->
+    <!-- Lists the infrastructure modules managed by this POM. -->
+    <!-- Maven builds these modules as part of the reactor      -->
+    <!-- when this parent project is built.                    -->
+    <!-- ====================================================== -->
+    <modules>
+
+        <!-- Service discovery and registration -->
+        <module>service-registry</module>
+
+        <!-- Centralized external configuration management -->
+        <module>config-server</module>
+
+        <!-- Central entry point for routing API requests -->
+        <module>api-gateway</module>
+
+    </modules>
+
+</project>
