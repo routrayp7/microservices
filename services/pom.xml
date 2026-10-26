@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- ====================================================== -->
+    <!-- 1. Maven Project Model Version                         -->
+    <!-- Defines the POM model version used by Maven.           -->
+    <!-- ====================================================== -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- ====================================================== -->
+    <!-- 2. Parent Project Configuration                        -->
+    <!-- Inherits shared properties, dependency management,     -->
+    <!-- and plugin management from the root project POM.       -->
+    <!-- ====================================================== -->
+    <parent>
+        <groupId>com.airline</groupId>
+        <artifactId>airline-microservices</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <!-- ====================================================== -->
+    <!-- 3. Project Coordinates                                 -->
+    <!-- Identifies this Maven aggregator module as "services". -->
+    <!-- ====================================================== -->
+    <artifactId>services</artifactId>
+
+    <!-- ====================================================== -->
+    <!-- 4. Packaging Type                                      -->
+    <!-- POM packaging groups and manages child Maven modules.  -->
+    <!-- It does not produce an executable JAR by itself.      -->
+    <!-- ====================================================== -->
+    <packaging>pom</packaging>
+
+    <!-- ====================================================== -->
+    <!-- 5. Project Metadata                                    -->
+    <!-- Provides the module's display name and purpose.        -->
+    <!-- ====================================================== -->
+    <name>Business Services</name>
+
+    <description>
+        Parent module for business services in the airline
+        microservices architecture.
+    </description>
+
+    <!-- ====================================================== -->
+    <!-- 6. Child Module Configuration                          -->
+    <!-- Declares the business service modules included in      -->
+    <!-- this aggregator project.                               -->
+    <!-- ====================================================== -->
+    <modules>
+
+        <!-- User management and related business operations -->
+        <module>user-services</module>
+
+    </modules>
+
+</project>

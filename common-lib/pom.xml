@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- ====================================================== -->
+    <!-- 1. Maven Project Model Version                         -->
+    <!-- ====================================================== -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- ====================================================== -->
+    <!-- 2. Parent Project Configuration                        -->
+    <!-- Inherits common properties and dependency management  -->
+    <!-- from the root airline-microservices POM.               -->
+    <!-- ====================================================== -->
+    <parent>
+        <groupId>com.airline</groupId>
+        <artifactId>airline-microservices</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <!-- ====================================================== -->
+    <!-- 3. Project Coordinates                                 -->
+    <!-- ====================================================== -->
+    <artifactId>common-lib</artifactId>
+
+    <!-- ====================================================== -->
+    <!-- 4. Packaging Type                                      -->
+    <!-- Builds a JAR containing reusable Java classes.         -->
+    <!-- ====================================================== -->
+    <packaging>jar</packaging>
+
+    <!-- ====================================================== -->
+    <!-- 5. Project Metadata                                    -->
+    <!-- ====================================================== -->
+    <name>Common Library</name>
+
+    <description>
+        Shared validation, DTO, persistence annotations,
+        JSON utilities, exception handling, and common
+        components for the airline microservices architecture.
+    </description>
+
+    <!-- ====================================================== -->
+    <!-- 6. Project Dependencies                                -->
+    <!-- ====================================================== -->
+    <dependencies>
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+</project>
